@@ -1,0 +1,75 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+bool alegere;
+int deplasament;
+string sir,sirc;
+ifstream f("citire.txt");
+ofstream g("afisare.txt");
+
+
+void citire()
+{
+    f>>sir;
+    f>>deplasament;
+    f>>alegere;
+}
+void afisare()
+{
+    g<<sirc;
+}
+/*class OperatiiFisier
+{
+    private: string numeFisier;
+    public: OperatiiFisier(string nf);
+    numeFisier=nf;
+    string citire();
+    afisare();
+};
+OperatiiFisier(string numeFisier, Citire, Afisare)
+{
+
+}
+      */
+
+class CaesarCipher
+{
+    string CaesarCipher::encrypt(string sir);
+    {
+        for(int i=0; i<sir.size(); i++)
+        {
+            sirc+=(sir[i]-'a'+deplasament)%26+'a';
+        }
+
+    }
+    string CaesarCipher::decrypt(string sir);
+    {
+        for(int i=0; i<sir.size(); i++)
+        {
+            sirc+=(sir[i]-'a'-deplasament)%26+'a';
+        }
+    }
+
+
+};
+/*CaesarCipher( Encrypt, Decrypt, int Deplasament)
+{
+    encrypt()=Encrypt;
+    decrypt()=Decrypt;
+    deplasament=Deplasament;
+}                             */
+
+int main()
+{
+    citire();
+    if(alegere==0)
+    {
+        CaesarCipher.encrypt(sir);
+    }
+    if(alegere==1)
+    {
+        CaesarCipher.decrypt(sir);
+    }
+    afisare();
+    return 0;
+}
